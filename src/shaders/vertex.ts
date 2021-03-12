@@ -4,8 +4,6 @@ export default `#version 300 es
 uniform mat4 u_worldInverseTranspose;
 uniform mat4 u_worldViewProjection;
 
-uniform vec3 u_reverseLightDirection;
-
 in vec4 a_position;
 in vec3 a_normal;
 
