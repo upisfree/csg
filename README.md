@@ -1,7 +1,7 @@
 # WebGL рендерер и реализация булевой геометрии
 Тестовое задание для WebGears.
 
-[Посмотреть](https://raw.githack.com/upisfree/csg/master/index.html).
+[Посмотреть](http://upisfr.ee/csg).
 
 ### Билд
 ```bash
