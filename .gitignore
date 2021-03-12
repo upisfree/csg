@@ -1,5 +1,5 @@
 build/*
-!build/csg.js
+!build/csg.esm.js
 node_modules/
 
 .DS_Store
