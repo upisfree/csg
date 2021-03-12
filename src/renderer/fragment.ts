@@ -6,4 +6,6 @@ class WebGLFragmentShader extends WebGLShader {
   }
 }
 
-export { WebGLFragmentShader };
+export {
+  WebGLFragmentShader
+};

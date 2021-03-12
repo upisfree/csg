@@ -8,4 +8,6 @@ class Geometry {
   }
 }
 
-export { Geometry };
+export {
+  Geometry
+};

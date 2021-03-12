@@ -7,6 +7,8 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 
+    <title>csg</title>
+
     <style>
 body {
   margin: 0;
@@ -17,7 +19,6 @@ body {
   /*top: 50%;*/
   /*left: 50%;*/
   /*transform: translate(-50%, -50%);*/
-
   /*width: 640px;*/
   /*height: 480px;*/
 
@@ -25,18 +26,23 @@ body {
   height: 100vh;
 
   border: 1px solid deeppink;
+
+  cursor: grab;
+}
+
+.grabbing {
+  cursor: grabbing !important;
 }
     </style>
   </head>
   <body>
     <div id="canvas-container"></div>
 
-    <script src="./lib/csg.js"></script>
     <script type="module">
-import { TestTask } from './build/csg.esm.js';
+import { CSG } from './build/csg.esm.js';
 
 const container = document.querySelector('#canvas-container');
-const csg = new TestTask(container);
+const csg = new CSG(container);
     </script>
   </body>
 </html>

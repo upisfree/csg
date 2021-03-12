@@ -5,4 +5,6 @@ function resize(renderer, container) {
   renderer.height = renderer.canvas.height = bounds.height;
 }
 
-export { resize };
+export {
+  resize
+};

@@ -6,4 +6,6 @@ class WebGLVertexShader extends WebGLShader {
   }
 }
 
-export { WebGLVertexShader };
+export {
+  WebGLVertexShader
+};

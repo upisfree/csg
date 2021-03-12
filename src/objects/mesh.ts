@@ -1,15 +1,13 @@
 import { WebGLUniform } from '../renderer/uniform';
-import { WebGLRenderer } from '../renderer/renderer';
 import { Object3D } from './object3d';
 import { Geometry } from '../geometries/geometry';
-// import { CSGGeometry } from '../geometries/csg';
 
 class Mesh extends Object3D {
   gl: WebGL2RenderingContext;
   vao: WebGLVertexArrayObject;
   
   geometry: Geometry;
-  program: WebGLProgram; // TODO: material instead
+  program: WebGLProgram; // TODO: here will be material instead of just program
   
   uniforms = {};
   attributes = {};
@@ -51,9 +49,9 @@ class Mesh extends Object3D {
   updateUniforms() {
     this.uniforms['u_worldViewProjection'].set(this.matrix);
     this.uniforms['u_worldInverseTranspose'].set(this.worldInverseTransposeMatrix);
-    
-    // console.log(this.worldMatrix.elements);
   }
 }
 
-export { Mesh };
+export {
+  Mesh
+};

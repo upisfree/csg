@@ -15,20 +15,13 @@ class PointerControls {
   
   update() {
     switch (this.pointer.buttonPressed) {
-      // case POINTER_BUTTON.LEFT:
-      //   this.camera.target.x += this.pointer.sceneDiff.x * this.dragSensitivity;
-      //   this.camera.target.y += this.pointer.sceneDiff.y * this.dragSensitivity;
-      //
-      //   break;
-  
       case POINTER_BUTTON.LEFT:
-      // case POINTER_BUTTON.RIGHT:
         this.camera.position.x += this.pointer.sceneDiff.x * this.dragSensitivity;
         this.camera.position.y += this.pointer.sceneDiff.y * this.dragSensitivity;
         
         break;
   
-      case POINTER_BUTTON.WHEEL:
+      case POINTER_BUTTON.RIGHT:
         this.camera.fov += this.pointer.sceneDiff.y * this.fovSensitivity;
 
         break;
@@ -36,4 +29,6 @@ class PointerControls {
   }
 }
 
-export { PointerControls };
+export {
+  PointerControls
+};

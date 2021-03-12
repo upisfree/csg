@@ -23,7 +23,6 @@ class PointerManager {
   screenPosition = new Vector2(0, 0);
   scenePosition = new Vector2(0, 0);
   
-  // screenDiff = new Vector2(0, 0);
   sceneDiff = new Vector2(0, 0);
 
   buttonPressed = POINTER_BUTTON.NONE;
@@ -53,18 +52,6 @@ class PointerManager {
     const sx = (x / this.renderer.width) * 2 - 1;
     const sy = -(y / this.renderer.height) * 2 + 1;
   
-    // if (this.sceneDiff.x !== this.scenePosition.x - sx) {
-    //   this.sceneDiff.x = this.scenePosition.x - sx;
-    // } else {
-    //   this.sceneDiff.x = 0;
-    // }
-    //
-    // if (this.sceneDiff.y !== this.scenePosition.y - sy) {
-    //   this.sceneDiff.y = this.scenePosition.y - sy;
-    // } else {
-    //   this.sceneDiff.y = 0;
-    // }
-  
     this.sceneDiff.x = this.scenePosition.x - sx;
     this.sceneDiff.y = this.scenePosition.y - sy;
   
@@ -84,14 +71,18 @@ class PointerManager {
     event.preventDefault();
     
     this.updateScreenPosition(event.clientX, event.clientY);
-  
+    
     this.buttonPressed = event.button;
+  
+    (event.currentTarget as HTMLElement).classList.add('grabbing');
   }
   
   onPointerUp(event: PointerEvent) {
     this.updateScreenPosition(0, 0);
   
     this.buttonPressed = POINTER_BUTTON.NONE;
+  
+    (event.currentTarget as HTMLElement).classList.remove('grabbing');
   
     this.sceneDiff.x = 0;
     this.sceneDiff.y = 0;

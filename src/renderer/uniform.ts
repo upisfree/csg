@@ -62,4 +62,6 @@ class WebGLUniform {
   }
 }
 
-export { WebGLUniform };
+export {
+  WebGLUniform
+};

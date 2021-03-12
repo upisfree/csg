@@ -21,18 +21,12 @@ class SphereGeometry extends Geometry {
   
     const vertsAroundCount = widthSegments + 1;
   
-    // we are going to generate our sphere by iterating through its
-    // spherical coordinates and generating 2 triangles for each quad on a
-    // ring of the sphere.
     const positions = [];
     const normals = [];
     const indices = [];
-    // const texCoords = [];
     
-    // generate the individual vertices in our vertex buffer.
     for (let y = 0; y <= heightSegments; y++) {
       for (let x = 0; x <= widthSegments; x++) {
-        // generate a vertex based on its spherical coordinates
         const u = x / widthSegments;
         const v = y / heightSegments;
         
@@ -51,20 +45,17 @@ class SphereGeometry extends Geometry {
         
         positions.push(radius * ux, radius * uy, radius * uz);
         normals.push(ux, uy, uz);
-        // texCoords.push(1 - u, v);
       }
     }
   
     for (let x = 0; x < widthSegments; x++) {
       for (let y = 0; y < heightSegments; y++) {
-        // make triangle 1 of quad.
         indices.push(
           (y + 0) * vertsAroundCount + x,
           (y + 0) * vertsAroundCount + x + 1,
           (y + 1) * vertsAroundCount + x
         );
       
-        // make triangle 2 of quad.
         indices.push(
           (y + 1) * vertsAroundCount + x,
           (y + 0) * vertsAroundCount + x + 1,
@@ -79,4 +70,6 @@ class SphereGeometry extends Geometry {
   }
 }
 
-export { SphereGeometry };
+export {
+  SphereGeometry
+};

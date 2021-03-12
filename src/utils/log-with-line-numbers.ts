@@ -5,4 +5,6 @@ function logWithLineNumbers(str) {
   console.log(numbered);
 }
 
-export { logWithLineNumbers };
+export {
+  logWithLineNumbers
+};

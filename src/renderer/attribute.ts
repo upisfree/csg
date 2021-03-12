@@ -26,7 +26,6 @@ class WebGLAttribute {
     this.location = this.gl.getAttribLocation(program, name);
     
     if (bufferType === this.gl.ARRAY_BUFFER) {
-
       this.gl.enableVertexAttribArray(this.location);
   
       this.gl.vertexAttribPointer(
@@ -41,4 +40,6 @@ class WebGLAttribute {
   }
 }
 
-export { WebGLAttribute };
+export {
+  WebGLAttribute
+};

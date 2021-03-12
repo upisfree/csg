@@ -81,4 +81,6 @@ class Vector3 {
   }
 }
 
-export { Vector3 };
+export {
+  Vector3
+};

@@ -22,4 +22,6 @@ class WebGLShader {
   }
 }
 
-export { WebGLShader };
+export {
+  WebGLShader
+};

@@ -28,4 +28,6 @@ class WebGLProgram {
   }
 }
 
-export { WebGLProgram };
+export {
+  WebGLProgram
+};

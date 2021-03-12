@@ -262,7 +262,6 @@ class Matrix4 {
     return scale;
   }
   
-  // матрица, переворачивающая Y, чтобы 0 был наверху
   static getOrthographic(left, right, bottom, top, near, far) {
     const orthographic = new Matrix4();
     orthographic.elements = [
@@ -296,4 +295,6 @@ class Matrix4 {
   }
 }
 
-export { Matrix4 };
+export {
+  Matrix4
+};
