@@ -12,19 +12,31 @@ body {
   margin: 0;
 }
 
-.canvas-container {
+#canvas-container {
+  /*position: absolute;*/
+  /*top: 50%;*/
+  /*left: 50%;*/
+  /*transform: translate(-50%, -50%);*/
 
+  /*width: 640px;*/
+  /*height: 480px;*/
+
+  width: 100vw;
+  height: 100vh;
+
+  border: 1px solid deeppink;
 }
     </style>
   </head>
   <body>
-    <canvas id="csg"></canvas>
+    <div id="canvas-container"></div>
 
+    <script src="./lib/csg.js"></script>
     <script type="module">
-import { CSG } from './build/csg.esm.js';
+import { TestTask } from './build/csg.esm.js';
 
-const canvas = document.querySelector('#csg');
-const csg = new CSG(canvas);
+const container = document.querySelector('#canvas-container');
+const csg = new TestTask(container);
     </script>
   </body>
 </html>
